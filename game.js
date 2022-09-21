@@ -25,21 +25,28 @@ function play() {
         console.log("random : " + random);
         console.log("numberChosen : " + numberChosen);
         if (numberChosen > random) {
-            resultFieldHTML.innerHTML = `It is less`;
+            resultFieldHTML.innerHTML = `YOU ARE TOO HIGH !`;
             gameOnGoing = false;
         }
         if (numberChosen < random) {
             gameOnGoing = false;
-            resultFieldHTML.innerHTML = `It is more`;
+            resultFieldHTML.innerHTML = `YOU ARE TOO LOW !`;
         }
         if (numberChosen === random) {
             gameOnGoing = false;
-            resultFieldHTML.innerHTML = `BIEN JOUE ${userName}, c'est le ${random} !!`;
+            resultFieldHTML.innerHTML = `GOOD GUESS ${userName}, THIS IS INDEED THE ${random} !!`;
         }
     }
-
-
 }
-
+//event listener on the "PLAY" button
 const btn = document.querySelector("#playBtn");
 btn.addEventListener("click", play);
+const inputBoxNumberChosen = document.querySelector("#valueField");
+console.log(inputBoxNumberChosen);
+//event listener to trigger the click button when we press enter on the  input box of the number chosen
+inputBoxNumberChosen.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        btn.click();
+    }
+});
