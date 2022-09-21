@@ -9,6 +9,25 @@
 const random = Math.floor(Math.random() * 100) + 1;
 
 
+// targeting of the input box to change their color after a first input has been done
+const inputBoxUser = document.querySelector("#name");
+const inputBoxUserValue = inputBoxUser.value;
+const inputBoxNumber = document.querySelector("#valueField");
+const inputBoxNumberValue = inputBoxNumber.value;
+//event listener to trigger the function changeInitialStat that change the font color
+inputBoxUser.addEventListener("input", function () {
+    changeInitialStat(inputBoxUser, inputBoxUserValue)
+});
+inputBoxNumber.addEventListener("input", function () {
+    changeInitialStat(inputBoxNumber, inputBoxNumberValue)
+});
+
+function changeInitialStat(elementToBeChecked, initialValue) {
+    if (elementToBeChecked.value !== initialValue) {
+        elementToBeChecked.style.color = "var(--primary-color)";
+    }
+}
+
 function play() {
     //- Get the player name from the input box
     const userName = document.querySelector("#name").value;
@@ -42,7 +61,6 @@ function play() {
 const btn = document.querySelector("#playBtn");
 btn.addEventListener("click", play);
 const inputBoxNumberChosen = document.querySelector("#valueField");
-console.log(inputBoxNumberChosen);
 //event listener to trigger the click button when we press enter on the  input box of the number chosen
 inputBoxNumberChosen.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {

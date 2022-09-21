@@ -65,7 +65,11 @@ label {
 input {
     border-radius: 10px;
     box-shadow: 10px 5px 5px var(--primary-color);
+    color: lightblue;
+}
 
+input:focus {
+    color: var(--primary-color);
 }
 
 #valueField {
