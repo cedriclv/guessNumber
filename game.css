@@ -1,0 +1,21 @@
+* {
+    font-size: 2rem;
+}
+
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 4rem;
+    width: 20rem;
+}
+
+label,
+input {
+    width: 20rem;
+}
