@@ -1,12 +1,14 @@
 :root {
-    --primary-color: rgb(33, 33, 240);
-    --secondary-color: rgb(169, 169, 240);
-    --darker-color: rgb(92, 92, 159);
+    --primary-color: #2bc1c8;
+    --secondary-color: #29c9b3;
+    --intermediate-color: #8ade99;
+    --darker-color: #dcdc94;
+    background-color: #e2e2ab;
 }
 
 body {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--darker-color);
 }
 
 * {
@@ -59,7 +61,8 @@ input {
 }
 
 label {
-    width: 300px;
+    width: 60%;
+    display: block;
 }
 
 input {
