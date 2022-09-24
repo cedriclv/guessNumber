@@ -1,0 +1,39 @@
+:root {
+    --primary-color: black;
+    --secondary-color: red;
+    --dark-color: black;
+    --light-color: white;
+
+    --margin: 1rem;
+    --margin2: 2rem;
+    --margin3: 3rem;
+    --margin4: 4rem
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    color: var(--secondary-color);
+    font-size: var(--margin3);
+}
+
+button {
+    height: var(--margin3);
+    width: var(--margin4);
+}
+
+.name {
+    display: flex;
+    flex: content;
+}
+
+.Ready {
+    display: flex;
+    justify-content: center;
+}
